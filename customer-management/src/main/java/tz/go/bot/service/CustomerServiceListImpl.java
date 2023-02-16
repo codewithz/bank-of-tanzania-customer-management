@@ -28,7 +28,7 @@ public class CustomerServiceListImpl implements CustomerService {
 	}
 	
 	public Customer getCustomerById(int id) {
-		return null;
+		return customerRepository.getCustomerById(id);
 	}
 	
 	public void deleteCustomer(int id) {

@@ -34,6 +34,13 @@ public class CustomerRepositoryListImpl implements CustomerRepository {
 	public Customer getCustomerById(int id) {
 		Customer c=null;
 		
+		for(Customer customerFromList:getAllCustomers()) {
+			if(customerFromList.getId()==id) {
+				c=customerFromList;
+				break;
+			}
+		}
+		
 		return c;
 	}
 	

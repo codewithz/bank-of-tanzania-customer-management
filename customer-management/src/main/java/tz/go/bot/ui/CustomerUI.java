@@ -54,7 +54,15 @@ public class CustomerUI {
 				}
 				break;
 			case 3:
-				System.out.println("Searching a Customer");
+				System.out.print("Enter an id to search");
+				int idToSearch=sc.nextInt();
+				Customer customerReturned=customerService.getCustomerById(idToSearch);
+				if(customerReturned!=null) {
+					System.out.println(customerReturned);
+				}
+				else {
+					System.out.println("No customer for given Id");
+				}
 				break;
 			case 4:
 				System.out.println("Deleting  a Customer");
